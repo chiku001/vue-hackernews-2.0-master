@@ -1,0 +1,11 @@
+version: "3"
+services:
+  frontend:
+    build:
+      ./docker/node
+    volumes:
+      - ./app:/vuessr
+    working_dir: /vuessr
+    ports:
+      - 3001:8080
+    command: "yarn dev"
